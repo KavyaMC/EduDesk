@@ -12,8 +12,105 @@
 </head>
 
 <body>
+    <a href="#main">Skip to content</a>
+    <header id="top">
+        <h1>EduDesk</h1>
+        <p>Learning and Teaching Management System</p>
 
-    <!-- EduDesk interface goes here. -->
+        <button type="button" id="menu-button" aria-expanded="false" aria-controls="main-navigation">
+            Menu
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation" hidden>
+            <ul>
+                <!-- Navigation items will be rendered here. -->
+            </ul>
+        </nav>
+    </header>
+
+    <hr />
+
+    <main id="main">
+
+        <header>
+            <h2>Courses</h2>
+
+            <button type="button" id="add-new-button">
+                Add New
+            </button>
+        </header>
+
+
+        <section aria-labelledby="search-heading">
+
+            <h3 id="search-heading">Site Search</h3>
+
+            <fieldset>
+                <label for="search-input">
+                    Search
+                </label>
+                <input type="search" id="search-input" name="search">
+                <br />
+
+                <label for="filter-by">
+                    Filter by
+                </label>
+
+                <select id="filter-by">
+                    <option value="date">Date</option>
+                    <option value="type">Type</option>
+                    <option value="status">Status</option>
+                    <option value="course">Course</option>
+                </select>
+
+
+                <label for="sort-by">
+                    Sort by
+                </label>
+
+                <select id="sort-by">
+                </select>
+                <br />
+                <button type="submit" id="search-button">
+                    Search
+                </button>
+
+                <button type="button" id="clear-button">
+                    Clear
+                </button>
+
+            </fieldset>
+            <br />
+            <p id="total-result-count"></p>
+            <br />
+            <ul id="search-results">
+                <!-- Search results will be rendered here. -->
+            </ul>
+        </section>
+
+
+        <hr />
+
+        <section aria-labelledby="contents-heading">
+
+            <h3 id="contents-heading">Course Contents</h3>
+
+            <div id="course-content">
+                <!-- Course content will be rendered here. -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <a href="#top">Back to top ⬆️</a>
+        <p>EduDesk</p>
+    </footer>
+
+
+    <div id="status-message" role="status" aria-live="polite" aria-atomic="true"></div>
 
 
     <script src="script.js"></script>
